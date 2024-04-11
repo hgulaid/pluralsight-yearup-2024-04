@@ -35,7 +35,7 @@ public class CommonMathFunctions
         double squaredValue = Math.pow(baseNumber, exponent);
         System.out.println("5 squared: " + squaredValue);
 
-        // calculating the squareroot of a value
+        // calculating the square root of a value
         int squaredNumber = 81;
         double squareRootValue = Math.sqrt(squaredValue);
         System.out.println("The square root of 81 is " + squareRootValue);

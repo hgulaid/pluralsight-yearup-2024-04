@@ -7,9 +7,9 @@ public class VariableLiterals
         // using hardcoded literal values
 
         // whole numbers
-        byte byteValue = 101; // whole numbers are treated as int by default, but will be converted to byte automatically as needed
-        short shortValue = 101; // whole numbers are treated as int by default, but will be converted to short automatically as needed
-        int intValue = 101; // whole numbers treated as int by default
+        byte byteValue = 101; // -128 to 127 256 numbers half negative half positive whole numbers are treated as int by default, but will be converted to byte automatically as needed
+        short shortValue = 32767; // whole numbers are treated as int by default, but will be converted to short automatically as needed
+        int intValue = 2145434558; // whole numbers treated as int by default
         long longValue = 101; // whole numbers are treated as int by default, but will be converted to long automatically as needed
         longValue = 101L; //you can add L (or l) to explicitly treat a number as a long
 

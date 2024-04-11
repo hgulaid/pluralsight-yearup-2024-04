@@ -33,11 +33,11 @@ public class TypeCasting
         double myDouble = 123.4567890123;
 
         // an int won't necessarily fit in a long
-        // myInt = myLong;
+        myInt = (int)myLong;
 
         // a double won't necessarily fit in a float
-        // myFloat = myDouble;
-
+        myFloat = (float)myDouble;
+        System.out.println("");
         // a float probably won't necessarily fit in an int
         // myLong = myFloat;
 

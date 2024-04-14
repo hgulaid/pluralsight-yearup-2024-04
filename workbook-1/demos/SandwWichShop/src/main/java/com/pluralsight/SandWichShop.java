@@ -9,29 +9,49 @@ public class SandWichShop {
     Scanner UserInput = new Scanner(System.in);
 
     final String regSandWhich = "Regular Sandwich";
-    final double priceRegular = 5.45;
     final String largeSandwich = "Large Sandwich";
-    final double priceLarge = 8.95;
-    final boolean Student;
+    final String regularLoaded = "Loaded Regular";
+    final String largeLoaded = "Loaded Large";
+    final double loadedPriceReg = 1.00;
+    final double loadedLarge = 1.75;
+    double priceLarge = 8.95;
+    double priceRegular = 5.45;
     int customerChoice;
     int kindOfSandwiches;
     double totalPrice;
     int age;
     double discount;
+    int loaded;
 
     // welcome user & show menu
-    System.out.printf("Hello, welcome in take a look at our menu\n");
+    System.out.print("Hello, welcome in take a look at our menu\n");
     System.out.printf("1.) %s - $ %.2f\n", regSandWhich,priceRegular);
     System.out.printf("2.) %s   - $ %.2f\n", largeSandwich,priceLarge);
     System.out.println();
     // Prompt user to pick an item and ask their age
     System.out.print("What size sandwich would you like?\n");
+    System.out.print("");
     kindOfSandwiches = UserInput.nextInt();
+
+    //Prompt user to ask them if they want the sandwich loaded
+    System.out.print("Would you like to upgrade to the loaded version?\n");
+    System.out.printf("1.) %s - %.2f\n 2.) %s  - %.2f\n", regularLoaded, loadedPriceReg, largeLoaded, loadedLarge);
+    loaded = UserInput.nextInt();
+    //get user age...
     System.out.print("How old are?\n");
     age = UserInput.nextInt();
 
+    // Calculate totals for loaded versions
+    if (loaded == 1) {
+        priceRegular = priceRegular + loadedPriceReg;
+        } else if (loaded == 2) {
+            priceLarge = priceLarge + loadedLarge;
+        } else{
+        loaded = 0;
+    }
+
     // Calculate discount
-    if (age <= 17) {
+    if (age <= 17 ) {
 
         discount = .10;
 

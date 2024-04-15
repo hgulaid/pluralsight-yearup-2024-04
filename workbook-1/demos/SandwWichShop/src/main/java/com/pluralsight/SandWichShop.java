@@ -35,7 +35,7 @@ public class SandWichShop {
 
     //Prompt user to ask them if they want the sandwich loaded
     System.out.print("Would you like to upgrade to the loaded version?\n");
-    System.out.printf("1.) %s - %.2f\n 2.) %s  - %.2f\n", regularLoaded, loadedPriceReg, largeLoaded, loadedLarge);
+    System.out.printf("1.) %s - %.2f\n2.) %s  - %.2f\n", regularLoaded, loadedPriceReg, largeLoaded, loadedLarge);
     loaded = UserInput.nextInt();
     //get user age...
     System.out.print("How old are?\n");
@@ -79,7 +79,8 @@ public class SandWichShop {
 
     }
 
-    System.out.printf("Your total price is $ %.2f \n", totalPrice);
+    System.out.printf("Your total pri" +
+            "ce is $ %.2f \n", totalPrice);
     System.out.print("Thank you for shopping with us!");
 
     }

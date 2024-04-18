@@ -9,13 +9,18 @@ public class Main {
     public static void main(String[] args)
     {
         CellPhone phone1 = register();
-        System.out.println("Serial number;" + phone1.getSerialNumber());
+        System.out.printf("Serial number;" + phone1.getSerialNumber());
         System.out.println("Model number;" + phone1.getModel());
         System.out.println("Carrier; " + phone1.getCarrier());
         System.out.println("Phone number;" + phone1.getPhoneNumber());
         System.out.println("Owner;" + phone1.getOwner());
 
         CellPhone phone2 = register();
+        System.out.println("Serial number;" + phone2.getSerialNumber());
+        System.out.println("Model number;" + phone2.getModel());
+        System.out.println("Carrier; " + phone2.getCarrier());
+        System.out.println("Phone number;" + phone2.getPhoneNumber());
+        System.out.println("Owner;" + phone2.getOwner());
 
     }
     public static CellPhone register (){

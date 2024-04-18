@@ -42,5 +42,11 @@ public String getOwner(){
 }
 public void setOwner (String owner){
     this.owner = owner;
+
+
+//public void dail(String phoneNumber) {
+//        System.out.println("Owner's phone is calling " + phoneNumber);
+//    }
+
 }
 }

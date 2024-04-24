@@ -16,7 +16,6 @@ public class Main
 
         // 1. I need a File object that points to the text file
         File file = new File(filePath);
-
         // 2. I need a file reader to open the file (Scanner)
         try(Scanner fileScanner = new Scanner(file))
         {

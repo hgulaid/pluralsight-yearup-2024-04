@@ -33,10 +33,11 @@ public class Main {
                 }
             } catch (Exception ex) {
                 System.out.println("Invalid please enter a number between 1-10");
-            } catch(NumberFormatException e){
-                System.out.println("Invalid please enter a number between 1-10");
-
+                break;
             }
+               // System.out.println("Invalid please enter a number between 1-10");
+
+
         }
     }
 

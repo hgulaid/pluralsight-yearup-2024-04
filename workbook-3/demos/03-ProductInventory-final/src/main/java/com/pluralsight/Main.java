@@ -88,6 +88,6 @@ public class Main
     public static void printProduct(Product product)
     {
         // sku   name                price       department
-        System.out.printf("%-7s %-35s $ %6.2f %s \n", product.getSku(), product.getName(), product.getPrice(), product.getDepartment());
+        System.out.printf("%-7s %-p $ %6.2f %s \n", product.getSku(), product.getName(), product.getPrice(), product.getDepartment());
     }
 }

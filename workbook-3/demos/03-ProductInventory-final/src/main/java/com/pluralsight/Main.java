@@ -83,7 +83,7 @@ public class Main
             printProduct(product);
         }
 
-    }
+        }
 
     public static void printProduct(Product product)
     {

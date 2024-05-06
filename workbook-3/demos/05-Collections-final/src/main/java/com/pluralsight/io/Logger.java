@@ -35,7 +35,7 @@ public class Logger
             this.filePath += ".log";
         }
     }
-
+//adding to the file
     public void logMessage(String event, String message)
     {
 
@@ -56,7 +56,7 @@ public class Logger
 
 
     }
-
+    //loading the data
     public ArrayList<LogEntry> readLog()
     {
         ArrayList<LogEntry> logEntries = new ArrayList<>();

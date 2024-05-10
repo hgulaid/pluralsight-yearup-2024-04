@@ -12,7 +12,7 @@ public class BankAccount
         this.name = name;
         this.balance = balance;
     }
-
+//getters and setters
     public int getAccountNumber()
     {
         return accountNumber;
@@ -32,6 +32,7 @@ public class BankAccount
         return balance;
     }
 
+//Methods
     public boolean withdraw(double amount)
     {
         if(amount < balance)

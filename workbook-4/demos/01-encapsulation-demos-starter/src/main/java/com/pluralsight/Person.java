@@ -42,4 +42,10 @@ public class Person
     {
         this.age = age;
     }
+
+    //derived or calculated getter
+    public String getFullName(){
+        return firstName + lastName;
+    }
 }
+

@@ -50,4 +50,10 @@ public class Order
     {
         this.quantity = quantity;
     }
+
+    // derived getter (calculates the total for us)
+    public double getTotalPrice(){
+        return price * quantity;
+    }
+
 }

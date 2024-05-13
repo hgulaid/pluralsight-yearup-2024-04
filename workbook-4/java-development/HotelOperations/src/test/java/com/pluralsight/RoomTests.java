@@ -85,4 +85,7 @@ public void CheckIn_ShouldMake_IsAvailableFalse(){
         assertFalse(room.getDirty());
     }
 
+
+
+
 }

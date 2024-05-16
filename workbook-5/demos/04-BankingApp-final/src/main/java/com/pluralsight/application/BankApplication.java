@@ -6,6 +6,7 @@ import com.pluralsight.services.AccountFileService;
 import com.pluralsight.ui.UserInterface;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class BankApplication
 {
@@ -46,6 +47,9 @@ public class BankApplication
                     // search for account
                     // display account information and balance
                     break;
+                case 6: // display all
+                    UserInterface.displayAccounts(bankAccounts);
+                    break;
                 case 0:
                     // write to file
                     AccountFileService.saveAccounts(bankAccounts);
@@ -59,25 +63,50 @@ public class BankApplication
     {
         int accountNumber = UserInterface.getAccountNumber();
 
-        var result = bankAccounts.stream()
-                                  .filter(acct -> acct.getAccountNumber() == accountNumber)
-                                  .findFirst();
+        BankAccount account = search(accountNumber);
 
-        if(result.isPresent())
+        if(account != null)
         {
-            BankAccount account = result.get();
             double amount = UserInterface.getWithdrawalAmount();
-            boolean canWithdraw = account.canWithdraw(amount);
-            if (canWithdraw)
+
+            if (withdraw(account, amount))
             {
-                account.withdraw(amount);
                 UserInterface.displayMessage(amount + " was withdrawn");
-                UserInterface.displayMessage("Remaining Balance: " + account.getBalance());
+                UserInterface.displayAccount(account);
             }
             else
             {
                 UserInterface.displayMessage("Sorry, you don't got enough");
             }
         }
+        else
+        {
+            UserInterface.displayMessage("Account number " + accountNumber + " was not found");
+        }
+    }
+
+    public boolean withdraw(BankAccount account, double amount)
+    {
+        boolean canWithdraw = account.canWithdraw(amount);
+        if (canWithdraw)
+        {
+            account.withdraw(amount);
+            return true;
+        }
+        return false;
+    }
+
+    public BankAccount search(int accountNumber)
+    {
+        Optional<BankAccount> searchResult = bankAccounts.stream()
+                .filter(acct -> acct.getAccountNumber() == accountNumber)
+                .findFirst();
+
+        if(searchResult.isPresent())
+        {
+            return searchResult.get();
+        }
+
+        return null;
     }
 }

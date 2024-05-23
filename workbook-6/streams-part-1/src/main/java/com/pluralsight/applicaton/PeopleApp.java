@@ -51,6 +51,7 @@ public class PeopleApp
         String name = UserInterface.getSearchNameFromUser();
         List<Person> searchResults = service.findPeople(people, name);
         UserInterface.displayPeople(searchResults, "Search people by name: " + name);
+
     }
 
     private void searchByAge()
